@@ -6,19 +6,17 @@
 
 :root {
   --main-color: #5E5D5D1A;
-  --sub-color:#5E5D5D1A;
-  --height: 30rem;
+  --height-block: 30rem;
   --font-size:12px;
   --font:'Inter', sans-serif;
   --color:black;
-  --cursor: pointer;
-  --height-login:17rem;
-  --height-other:10rem;
-  --width-right:20rem;
-  --height-placeholder:2.5rem;
-  --width-placeholder:20rem;
+  --height-right-dw:10rem;
+  --height-right-up:17rem;
+  --width-right:30rem;
+  --height-placeholder:2rem;
+  --width-placeholder:30rem;
   --border-radius:.5rem;
-  --login-color:#5e5d5d92;
+  --cursor: pointer;
 }
 
 body {
@@ -32,7 +30,6 @@ body {
   display: flex;
   flex-direction: column;  
   align-items: center;
-  /* padding: 2rem; */
   gap: 2rem;
 } 
 
@@ -55,7 +52,7 @@ body {
 }
 
 .right-panel {
-  background-color: var(--sub-color);
+  background-color: var(--main-color);
   height: 26rem; /* taller bottom panel */
   display: flex;
   flex-direction: column;
@@ -75,13 +72,13 @@ body {
 
   .left-panel {
     width: 25rem;
-    height: var(--height);
+    height: var(--height-block);
     margin-left: 4rem;
   }
 
   .right-panel {
     width: 35rem;
-    height: var(--height);
+    height: var(--height-block);
     margin-right: 4rem;
   }
 }
@@ -96,52 +93,27 @@ body {
   cursor: var(--cursor);
 }
 
+p{
+  text-align: center;
+  color: #090c0160;
+}
+
 .login-info{
-  height: var(--height-login);
+  height: var(--height-right-up);
   width: var(--width-right);
-  background-color:transparent
+  background-color:transparent;
 }
 
 .login-buttons{
-  height: var(--height-other);
-  width: var(--width-right);
+  height: var(--height-right-dw);
+  width: var(--width-right-);
   background-color: transparent;
+  margin-top: 5rem;
   color:var(--color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .8rem;
-}
-
-.apple-button, .google-button {
-  background-color: transparent;
-  border-color: rgba(0, 0, 0, 0.749);
-  width: var(--width-placeholder);
-  height: var(--height-placeholder);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-weight: 700;
-}
-
-/* Add spacing between them */
-.apple-button {
-  margin-top: .5rem; /* Or any desired value */
-}
-
-/* on hover at options ???? */
-
-.signup-text {
-  margin-top: 1.5rem;
-  color: var(--color);
-  text-align: center;
-  font-size: 14px;
-  white-space: nowrap; /* prevents wrapping */
-}
-
-.footer{
-  text-decoration: none;
-  color: rgb(43, 147, 232);
 }
 
 .tab-menu ul{
@@ -155,7 +127,7 @@ body {
   list-style-type: none;
   /* border: 2px solid black; */
   /* padding: 10px 20px; */
-  width: 20rem;
+  width: var(--width-right);
 }
 
 .tab-menu ul li .tab{
@@ -172,20 +144,23 @@ body {
 
 .login-form {
   display: flex;
-  justify-content: space-evenly;
-  gap :.5rem;
+  gap :.7rem;
   flex-direction: column;
   margin-top: 2rem;
   color: var(--color);
   font-size: var(--font-size);
   font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 input {
   border: 2px solid rgba(0, 0, 0, 0.26);; /* Style matching buttons */
   border-radius: var(--border-radius); /* Rounded corners like the buttons */
+  border-color: var(--color);
   padding: 10px; /* Padding for inner spacing */
   height: var(--height-placeholder); /* Consistent height */
+  width: var(--width-placeholder);
   font-size: var(--font-size); /* Match font size */
   background-color: transparent; /* Background color similar to buttons */
 }
@@ -194,7 +169,20 @@ input:hover{
   border-color: #a3d133;
 }
 
-.continue-btn {
+.reg{
+  margin-top: .6rem;
+  height: var(--height-placeholder);
+  width: var(--width-placeholder);
+  background-color: #090c01;
+  color: white;
+  font-weight: 600;
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.sign {
   margin-top: .6rem;
   height: var(--height-placeholder);
   width: var(--width-placeholder);
@@ -205,14 +193,4 @@ input:hover{
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
-}
-
-.forgot-link{
-  margin-left: 6rem;
-}
-
-#hi{
-  height: 3px;
-  width: 3px;
-  color: black;
 }
