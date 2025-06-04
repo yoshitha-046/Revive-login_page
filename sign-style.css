@@ -49,6 +49,10 @@ body {
 .left-panel {
   background-color: var(--main-color);
   height: 18rem; /* smaller height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-panel {
@@ -193,4 +197,32 @@ input:hover{
   border-radius: var(--border-radius);
   border: none;
   cursor: pointer;
+}
+
+.logo{
+  height: 10rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.side-img{
+  height: 40rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.box-img{
+  height: 11rem;
+  width: 10rem;
+  background-size: contain;
+  margin-top: -20px;
+}
+
+.box-img1{
+  height: 19rem;
+  width: 20rem;;
+  background-size: contain;
+  margin-top: -10px;
 }

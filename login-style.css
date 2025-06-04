@@ -6,19 +6,17 @@
 
 :root {
   --main-color: #5E5D5D1A;
-  --sub-color:#5E5D5D1A;
-  --height: 30rem;
+  --height-block: 30rem;
   --font-size:12px;
   --font:'Inter', sans-serif;
   --color:black;
-  --cursor: pointer;
-  --height-login:17rem;
-  --height-other:10rem;
+  --height-right-dw:10rem;
+  --height-right-up:17rem;
   --width-right:20rem;
-  --height-placeholder:2.5rem;
+  --height-placeholder:2rem;
   --width-placeholder:20rem;
   --border-radius:.5rem;
-  --login-color:#5e5d5d92;
+  --cursor: pointer;
 }
 
 body {
@@ -52,10 +50,14 @@ body {
 .left-panel {
   background-color: var(--main-color);
   height: 18rem; /* smaller height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-panel {
-  background-color: var(--sub-color);
+  background-color: var(--main-color);
   height: 26rem; /* taller bottom panel */
   display: flex;
   flex-direction: column;
@@ -75,13 +77,13 @@ body {
 
   .left-panel {
     width: 25rem;
-    height: var(--height);
+    height: var(--height-block);
     margin-left: 4rem;
   }
 
   .right-panel {
     width: 35rem;
-    height: var(--height);
+    height: var(--height-block);
     margin-right: 4rem;
   }
 }
@@ -97,7 +99,7 @@ body {
 }
 
 .login-info{
-  height: var(--height-login);
+  height: var(--height-right-up);
   width: var(--width-right);
   background-color:transparent
 }
@@ -184,6 +186,7 @@ body {
 input {
   border: 2px solid rgba(0, 0, 0, 0.26);; /* Style matching buttons */
   border-radius: var(--border-radius); /* Rounded corners like the buttons */
+  border-color: var(--color);
   padding: 10px; /* Padding for inner spacing */
   height: var(--height-placeholder); /* Consistent height */
   font-size: var(--font-size); /* Match font size */
@@ -211,8 +214,30 @@ input:hover{
   margin-left: 6rem;
 }
 
-#hi{
-  height: 3px;
-  width: 3px;
-  color: black;
+.logo{
+  height: 10rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.side-img{
+  height: 40rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.box-img{
+  height: 11rem;
+  width: 10rem;
+  background-size: contain;
+  margin-top: -20px;
+}
+
+.box-img1{
+  height: 19rem;
+  width: 20rem;;
+  background-size: contain;
+  margin-top: -10px;
 }
